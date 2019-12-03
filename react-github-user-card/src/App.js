@@ -5,9 +5,28 @@ import './App.scss';
 
 //function App() {
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      gitHubData: ""
+    };
+  }
+
+  componentDidMount() {
+    const gitHub = () => {
+      fetch('https://api.github.com/users/newbi462')
+        .then(response => response.json())
+        .then(gitHubData => this.setState({gitHubData: gitHubData}))
+        .catch(err => console.log('noooo'));
+    };///seems to be an iffanate loop
+    gitHub();
+  }// breaks the loop to run once
 
   render() {
     return (
+      <>
+      {}
+      {console.log(this.state.gitHubData)}
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -24,6 +43,7 @@ class App extends React.Component {
           </a>
         </header>
       </div>
+      </>
     );
   }
 }
