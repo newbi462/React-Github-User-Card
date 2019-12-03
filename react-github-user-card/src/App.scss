@@ -23,5 +23,12 @@
 
 //User Card
 .userCard {
-  border: 3px solid #09d3ac; 
+  border: 3px solid #09d3ac;
+  img {
+    width: 125px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
