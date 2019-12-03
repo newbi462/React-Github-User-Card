@@ -6,7 +6,7 @@ const Followers = (props) => {
     <>
     {props.statePropsFollowers.map(function(item) {
         return (
-          <div className="userCard">
+          <div className="userCard w3-animate-zoom">
             <a href={item.html_url}>
               <h2>{item.login}</h2>
             </a>

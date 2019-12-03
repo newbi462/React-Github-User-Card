@@ -1,3 +1,6 @@
+@import 'SASS/Reset';
+@import 'SASS/W3css';
+
 .App {
   text-align: center;
 }
@@ -15,6 +18,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .App-link {
@@ -24,11 +30,34 @@
 //User Card
 .userCard {
   border: 3px solid #09d3ac;
+  border-radius: 15px;
+  width: 31%;
+  //height: 375px;
+  h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0.5em 0;
+  }
   img {
-    width: 125px;
+    width: 65%;
+    margin: 0 auto;
   }
   a {
     text-decoration: none;
     color: white;
   }
+  .splitUserCard {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    img {
+      width: 48%;
+    }
+    ul li {
+      text-align: left;
+    }
+  }
+}
+.w3-animate-zoom {
+  animation:animatezoom 1.2s;
 }

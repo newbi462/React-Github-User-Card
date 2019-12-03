@@ -9,13 +9,16 @@ const UserInfo = (props) => {
       <a href={props.stateProps.gitHubData.html_url}>
         <h2>{props.stateProps.gitHubData.login}</h2>
       </a>
-      <img src={props.stateProps.gitHubData.avatar_url} />
 
-      <ul>
-        <li>name: {props.stateProps.gitHubData.name}</li>
-        <li>location: {props.stateProps.gitHubData.location}</li>
-        <li>followers: {props.stateProps.gitHubData.followers}</li>
-      </ul>
+      <div className="splitUserCard">
+        <img src={props.stateProps.gitHubData.avatar_url} />
+
+        <ul>
+          <li>name: {props.stateProps.gitHubData.name}</li>
+          <li>location: {props.stateProps.gitHubData.location}</li>
+          <li>followers: {props.stateProps.gitHubData.followers}</li>
+        </ul>
+      </div>
     </div>
     </>
   );

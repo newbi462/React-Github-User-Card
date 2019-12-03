@@ -50,8 +50,6 @@ class App extends React.Component {
         <header className="App-header">
           <UserInfo stateProps={this.state} />
           <Followers statePropsFollowers={this.state.followers} />
-
-
         </header>
       </div>
       </>
